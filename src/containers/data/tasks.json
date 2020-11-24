@@ -1,26 +1,86 @@
 [
   {
     "id": 1,
-    "color": "#89c2c7",
-    "title": "Task #1",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aspernatur."
+    "color": "#bb3c3c",
+    "title": "Drag and drop",
+    "content": "Основная идея приложения, реализовать drag-and-drop для своего личного опыта."
   },
   {
     "id": 2,
-    "color": "#89c2c7",
-    "title": "Task #2",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aspernatur."
+    "color": "#bf6322",
+    "title": "Список",
+    "content": "Добавить на страницу список задач."
   },
   {
     "id": 3,
-    "color": "#89c2c7",
-    "title": "Task #3",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aspernatur."
+    "color": "#bfac23",
+    "title": "Форма",
+    "content": "Сделать скрытую форму, которая будет использоваться для добавления и создания задач."
   },
   {
     "id": 4,
-    "color": "#89c2c7",
-    "title": "Task #4",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aspernatur."
+    "color": "#22bf52",
+    "title": "Добавление",
+    "content": "Сделать кнопку добавления и добавить несколько задач."
+  },
+  {
+    "id": 5,
+    "color": "#22bfbf",
+    "title": "Изменение списка",
+    "content": "Сделать возможность редактировать и удалять существующие задачи."
+  },
+  {
+    "id": 6,
+    "color": "#226fbf",
+    "title": "Валидация и CSS",
+    "content": "Добавить валидацию в форму и стилизировать приложение."
+  },
+  {
+    "id": 7,
+    "color": "#8322bf",
+    "title": "Карточки",
+    "content": "Добавить просмотр карточками и добавить переключение видов."
+  },
+  {
+    "id": 8,
+    "color": "#bb3c3c",
+    "title": "Drag and drop",
+    "content": "Основная идея приложения, реализовать drag-and-drop для своего личного опыта."
+  },
+  {
+    "id": 9,
+    "color": "#bf6322",
+    "title": "Список",
+    "content": "Добавить на страницу список задач."
+  },
+  {
+    "id": 10,
+    "color": "#bfac23",
+    "title": "Форма",
+    "content": "Сделать скрытую форму, которая будет использоваться для добавления и создания задач."
+  },
+  {
+    "id": 11,
+    "color": "#22bf52",
+    "title": "Добавление",
+    "content": "Сделать кнопку добавления и добавить несколько задач."
+  },
+  {
+    "id": 12,
+    "color": "#22bfbf",
+    "title": "Изменение списка",
+    "content": "Сделать возможность редактировать и удалять существующие задачи."
+  },
+  {
+    "id": 13,
+    "color": "#226fbf",
+    "title": "Валидация и CSS",
+    "content": "Добавить валидацию в форму и стилизировать приложение."
+  },
+  {
+    "id": 14,
+    "color": "#8322bf",
+    "title": "Карточки",
+    "content": "Добавить просмотр карточками и добавить переключение видов."
   }
 ]

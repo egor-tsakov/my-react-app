@@ -4,7 +4,8 @@ html, body {
 }
 
 body {
-    background-color: #ffffff;
+    background: url("./../images/background.jpg");
+    background-size: cover;
 }
 
 * {
@@ -29,10 +30,26 @@ body {
     justify-content: space-between;
 }
 
+.jc-end {
+    justify-content: flex-end;
+}
+
+.js-start {
+    justify-content: flex-start;
+}
+
 .fd-col {
     flex-direction: column;
 }
 
 .fd-row {
     flex-direction: row;
+}
+
+.fw-wrap {
+    flex-wrap: wrap;
+}
+
+.ac-start {
+    align-content: flex-start;
 }

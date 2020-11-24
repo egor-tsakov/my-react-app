@@ -1,14 +1,10 @@
-.modal-close {
-    cursor: pointer;
-}
-
 .modal-wrapper {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(68, 68, 123, 0.5);
+    background-color: rgba(8, 8, 8, 0.5);
 }
 
 .modal-wrapper.hidden {
@@ -19,33 +15,45 @@
     display: flex;
 }
 
-.modal-content {
-    background-color: #ffffff;
+.modal-wrapper .modal-form {
+    background-color: #f19c01;
     min-width: 600px;
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 
-.modal-form-content {
+.modal-wrapper .modal-form .modal-form-close {
+    cursor: pointer;
+}
+
+.modal-wrapper .modal-form .modal-form-content {
     margin-top: 25px;
 }
 
-.modal-form-content form {
-    display: flex;
-    flex-direction: column;
-}
-
-form > input, textarea {
+.modal-wrapper .modal-form .modal-form-content input, textarea {
     margin: 7px 0;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 3px;
     border: 1px solid #717171;
+    background-color: #e2ad4d;
+    color: black;
 }
 
-input:focus {
-    box-shadow: 0 0 3px 0 #684a80;
+
+.modal-wrapper .modal-form .modal-form-content button {
+    padding: 8px 13px;
+    border-radius: 3px;
+    border: 1px solid #717171;
+    color: #717171;
+    background-color: #e2ad4d;
 }
 
-textarea:focus {
-    box-shadow: 0 0 3px 0 #684a80;
+.modal-wrapper .modal-form .modal-form-content button:hover {
+    box-shadow: 0 0 2px 0 #000000;
+    color: #000000
 }
+
+.modal-wrapper .modal-form .modal-form-content input:focus, textarea:focus {
+    box-shadow: 0 0 3px 0 #000000;
+}
+

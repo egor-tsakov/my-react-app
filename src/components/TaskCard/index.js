@@ -1,26 +1,25 @@
 import React from 'react';
 
-import TaskListItem from './TaskListItem';
+import TaskCardItem from './TaskCardItem';
 import DragAndDrop from '../common/DragAndDrop';
 
-const TaskList = ({ tasks, setTasks, updateForm, removeTask }) => {
-  console.log(tasks);
+const TaskCard = ({ tasks, setTasks, updateForm, removeTask }) => {
   return tasks ? (
-    <div className="task-list d-flex fd-col">
+    <div className="task-card fw-wrap d-flex fd-row jc-start ac-start">
       <DragAndDrop
         // Props for drag and drop component
         values={tasks}
         setValues={setTasks}
-        ItemComponent={TaskListItem}
+        ItemComponent={TaskCardItem}
         // Props for item component
         onUpdate={updateForm}
         onRemove={removeTask}
       />
-      <div onClick={() => updateForm()} className="btn-task-create">
+      <div onClick={() => updateForm()} className="btn-task-create d-flex ai-center jc-center">
         Добавить задачу
       </div>
     </div>
   ) : null;
 };
 
-export default TaskList;
+export default TaskCard;

@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 
 const DragAndDrop = ({ values, setValues, ItemComponent, ...restProps }) => {
+  // Номер активного элемента.
   const [draggedFrom, setDraggedFrom] = useState(null);
+  // Номер положения активного элемента.
   const [draggedTo, setDraggedTo] = useState(null);
+  // Исходный список.
   const [originalList, setOriginalList] = useState([]);
+  // Новый список.
   const [updatedList, setUpdateList] = useState([]);
 
   const onDragStart = (e) => {
@@ -43,7 +47,7 @@ const DragAndDrop = ({ values, setValues, ItemComponent, ...restProps }) => {
     setDraggedTo(null);
   };
 
-  return values.map((value, index) => (
+  return values ? values.map((value, index) => (
     <div
       key={index}
       data-position={index}
@@ -56,7 +60,7 @@ const DragAndDrop = ({ values, setValues, ItemComponent, ...restProps }) => {
     >
       <ItemComponent {...restProps} value={value} />
     </div>
-  ));
+  )) : null;
 };
 
 export default DragAndDrop;

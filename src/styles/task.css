@@ -1,0 +1,152 @@
+/*---------------------*/
+/* Task page component */
+/*---------------------*/
+
+.task-page {
+    box-shadow: 0 0 6px 0 #000;
+    padding: 0 50px;
+    height: 100vh;
+    overflow: scroll;
+    width: 50%;
+}
+
+.btn-task-create {
+    border: 1px dashed #000000;
+    padding: 10px;
+    margin: 4px 0;
+    border-radius: 3px;
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+}
+
+.task-list-item, .task-card-item {
+    position: relative;
+    margin: 4px 0;
+    border-radius: 3px;
+}
+
+/*---------------------*/
+/* Task list component */
+/*---------------------*/
+
+.task-list-item .task-title {
+    border-bottom: 1px solid #f19c01;
+    padding: 10px 10px 3px 10px;
+}
+
+.task-list-item .task-content {
+    padding: 3px 10px 10px 10px;
+}
+
+.task-list-item .task-actions {
+    top: 0;
+    position: absolute;
+    right: 20px;
+    visibility: hidden;
+}
+
+.task-list-item .task-actions .task-item-update {
+    padding: 5px 10px;
+    background-color: #64c16b;
+    border-bottom-left-radius: 3px;
+}
+
+.task-list-item .task-actions .task-item-remove {
+    padding: 5px 10px;
+    background-color: #c57b4f;
+    border-bottom-right-radius: 3px;
+}
+
+.task-list-item:hover .task-actions {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.task-list-item .task-actions .task-item-update:hover {
+    box-shadow: -2px 2px 7px 0 #64c16b;
+}
+
+.task-list-item .task-actions .task-item-remove:hover {
+    box-shadow: 2px 2px 7px 0 #c57b4f;
+}
+
+/*---------------------*/
+/* Task bar component */
+/*---------------------*/
+
+.task-bar > span {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/*---------------------*/
+/* Task card component */
+/*---------------------*/
+
+.task-card > div {
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 24%;
+    min-width: 24%;
+    margin: 0 3px;
+}
+
+.task-card-item .task-content {
+    padding: 3px 10px 10px 10px;
+    min-height: 150px;
+    max-height: 150px;
+    white-space: normal;
+    overflow: scroll;
+}
+
+.task-card-item .task-title {
+    border-bottom: 1px solid #f19c01;
+    padding: 10px 10px 3px 10px;
+}
+
+.task-card .btn-task-create {
+    padding: 0;
+    min-height: 173px;
+    margin: 4px 3px;
+}
+
+.task-card-item .task-actions {
+    position: absolute;
+    visibility: hidden;
+    bottom: 0;
+    right: 0;
+}
+
+.task-card-item .task-actions .task-item-update {
+    padding: 5px 10px;
+    background-color: #64c16b;
+    border-top-left-radius: 3px;
+}
+
+.task-card-item .task-actions .task-item-remove {
+    padding: 5px 10px;
+    background-color: #c57b4f;
+    border-top-right-radius: 3px;
+}
+
+.task-card-item:hover .task-actions {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.task-card-item .task-actions .task-item-update:hover {
+    box-shadow: -2px -2px 7px 0 #64c16b;
+}
+
+.task-card-item .task-actions .task-item-remove:hover {
+    box-shadow: 2px -2px 7px 0 #c57b4f;
+}
+
+/*---------------------*/
+/* Task form component */
+/*---------------------*/
+
+.task-error-message {
+    color: #ff0000;
+}

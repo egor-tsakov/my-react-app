@@ -1,7 +1,9 @@
 import React from 'react';
+
 import TaskPageContainer from './containers/TaskPageContainer';
+
 // Import css files
-import './styles/main.css';
+import './styles/index.css';
 
 const App = () => (
   <div className="d-flex jc-center">

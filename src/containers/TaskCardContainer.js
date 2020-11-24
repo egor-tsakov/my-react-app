@@ -1,9 +1,11 @@
 import React from 'react';
 
-const TaskCardContainer = () => {
+import TaskCard from '../components/TaskCard';
+
+const TaskCardContainer = (props) => {
   return (
-    <span>Hello world</span>
-  )
-}
+    <TaskCard {...props} />
+  );
+};
 
 export default TaskCardContainer;

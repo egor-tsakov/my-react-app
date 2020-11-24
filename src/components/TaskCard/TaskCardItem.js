@@ -1,14 +1,14 @@
 import React from 'react';
 import { getColorType } from '../../helpers/taskHelpers';
 
-const TaskListItem = ({ value, onRemove, onUpdate }) => {
+const TaskCardItem = ({ value, onRemove, onUpdate }) => {
   const style = {
     backgroundColor: value?.color,
     color: getColorType(value?.color) ? '#000000' : '#ffffff',
   };
 
   return (
-    <div className="task-list-item" style={style}>
+    <div className="task-card-item" style={style}>
       <div className="task-title">{value?.title}</div>
       <div className="task-content">{value?.content}</div>
       <div className="task-actions d-flex fd-row">
@@ -16,7 +16,7 @@ const TaskListItem = ({ value, onRemove, onUpdate }) => {
         <div className="task-item-remove" onClick={() => onRemove(value?.id)}>Удалить</div>
       </div>
     </div>
-  );
+  )
 };
 
-export default TaskListItem;
+export default TaskCardItem;
