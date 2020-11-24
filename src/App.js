@@ -4,6 +4,7 @@ import TaskPageContainer from './containers/TaskPageContainer';
 
 // Import css files
 import './styles/index.css';
+import './styles/mobile.css';
 
 const App = () => (
   <div className="d-flex jc-center">

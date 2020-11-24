@@ -1,0 +1,25 @@
+@media screen and (max-width: 1300px)  {
+    .task-card > div {
+        max-width: 32%;
+        min-width: 32%;
+    }
+}
+
+@media screen and (max-width: 1000px)  {
+    .task-card > div {
+        max-width: 48%;
+        min-width: 48%;
+    }
+}
+
+@media screen and (max-width: 1000px)  {
+    .task-card > div {
+        min-width: 100%;
+    }
+
+    .task-page {
+        box-shadow: none;
+        padding: 0 50px;
+        width: 100%;
+    }
+}
