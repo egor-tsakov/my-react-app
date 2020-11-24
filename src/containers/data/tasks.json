@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "color": "#89c2c7",
+    "title": "Task #1",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aspernatur."
+  },
+  {
+    "id": 2,
+    "color": "#89c2c7",
+    "title": "Task #2",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aspernatur."
+  },
+  {
+    "id": 3,
+    "color": "#89c2c7",
+    "title": "Task #3",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aspernatur."
+  },
+  {
+    "id": 4,
+    "color": "#89c2c7",
+    "title": "Task #4",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aspernatur."
+  }
+]
