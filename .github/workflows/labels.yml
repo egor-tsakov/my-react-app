@@ -1,22 +1,61 @@
-name: Add Labels
+name: Update labels
 
 on:
   pull_request:
+    types: [synchronize, opened]
   pull_request_review:
+    types: [submitted]
+
+env:
+  CREATE_LABEL: enhancement
+  UPDATE_LABEL: bug
+  APPROVE_LABEL: changelog
 
 jobs:
-  add_labels:
+  # Run command if create pull request
+  create:
+    if: github.event_name == 'pull_request' && github.event.action == 'opened'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions-ecosystem/action-add-labels@v1
-#         if: ${{ startsWith(github.event.comment.body, '/add-labels') }}
+        with:
+          labels: $CREATE_LABEL
+  # Run command if commented pull request
+  comment:
+    if: github.event_name == 'pull_request_review' && github.event.review.state == 'commented'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: $UPDATE_LABEL
+      - uses: actions-ecosystem/action-remove-labels@v1
+        with:
+          labels: $CREATE_LABEL
+  # Run command if commit in pull request
+  update:
+    if: github.event_name == 'pull_request' && github.event.action == 'synchronize'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: $CREATE_LABEL
+      - uses: actions-ecosystem/action-remove-labels@v1
+        with:
+          labels: $UPDATE_LABEL
+  # Run command if approve pull request
+  approve:
+    if: github.event_name == 'pull_request_review' && github.event.review.state == 'approved'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: $APPROVE_LABEL
+      - uses: actions-ecosystem/action-remove-labels@v1
         with:
           labels: |
-            documentation
-            changelog
-      - name: 'echo'
-        run: |
-          echo 'state = ${{ github.event.review.state }}'
-          echo 'name = ${{ github.event_name }}'
-          echo 'action = ${{ github.event.action }}'
+            $CREATE_LABEL
+            $UPDATE_LABEL
