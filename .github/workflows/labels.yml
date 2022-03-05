@@ -16,5 +16,5 @@ jobs:
             documentation
             changelog
       - name: 'echo'
-        run: echo "${{ githib.event_name }}"
+        run: echo "${{ github.event_name }}"
       
