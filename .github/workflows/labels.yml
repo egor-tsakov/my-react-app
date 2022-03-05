@@ -2,7 +2,6 @@ name: Add Labels
 
 on:
   pull_request:
-    types: opened
 
 jobs:
   add_labels:
@@ -16,5 +15,8 @@ jobs:
             documentation
             changelog
       - name: 'echo'
-        run: echo "${{ github.event.type }}"
+        run: |
+          echo "${{ github.context.eventName }}"
+          echo "${{ github.context.type }}"
+          echo "${{ github.context.eventType }}"
       
