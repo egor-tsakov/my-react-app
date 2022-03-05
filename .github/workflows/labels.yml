@@ -17,7 +17,6 @@ jobs:
             changelog
       - name: 'echo'
         run: |
-          echo '${{ toJSON(github) }}'
           echo 'state = ${{ github.event.review.state }}'
-          echo 'name = ${{ github.eventName }}'
+          echo 'name = ${{ github.event_name }}'
           echo 'action = ${{ github.event.action }}'
