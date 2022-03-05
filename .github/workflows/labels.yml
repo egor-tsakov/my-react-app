@@ -15,8 +15,4 @@ jobs:
             documentation
             changelog
       - name: 'echo'
-        run: |
-          echo "${{ github.context.eventName }}"
-          echo "${{ github.context.type }}"
-          echo "${{ github.context.eventType }}"
-      
+        run: echo '${{ toJSON(github) }}'
