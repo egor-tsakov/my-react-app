@@ -12,6 +12,11 @@ env:
   APPROVE_LABEL: changelog
 
 jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'echo'
+        run: echo '${{ event.pull_request.labels }}'
   # Run command if create pull request
   create:
     if: github.event_name == 'pull_request' && github.event.action == 'opened'
@@ -59,8 +64,3 @@ jobs:
           labels: |
             ${{ env.CREATE_LABEL }}
             ${{ env.UPDATE_LABEL }}
-  echo:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 'echo'
-        run: echo '${{ toJSON(github) }}'
