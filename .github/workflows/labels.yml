@@ -59,3 +59,8 @@ jobs:
           labels: |
             ${{ env.CREATE_LABEL }}
             ${{ env.UPDATE_LABEL }}
+  echo:
+    runs-on: ubunty-latest
+    steps:
+      - name: 'echo'
+        run: echo '${{ toJSON(github) }}'
