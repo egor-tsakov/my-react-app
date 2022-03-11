@@ -35,7 +35,7 @@ jobs:
           labels: ${{ env.CREATE_LABEL }}
   # Run command if commit in pull request
   update:
-    if: github.event_name == 'pull_request' && github.event.action == 'synchronize'
+    if: github.event_name == 'pull_request' && github.event.action == 'synchronize' && contains(github.event.pull_request.labels.*.name, 'bug')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
