@@ -23,7 +23,7 @@ jobs:
           labels: ${{ env.CREATE_LABEL }}
   # Run command if commented pull request
   comment:
-    if: github.event_name == 'pull_request_review' && github.event.review.state == 'commented' && contains(github.event.issue.labels.*.name, '${{ env.CREATE_LABEL }}')
+    if: github.event_name == 'pull_request_review' && github.event.review.state == 'commented' && contains(github.event.issue.labels.*.name, env.CREATE_LABEL)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
